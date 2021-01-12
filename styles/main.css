@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+  /* FONT SIZES */
+  --fs-lg: 16px;
+  --fs-md: 14px;
+  --fs-sm: 12px;
+  /* FONT WEIGHT */
+  --fw-normal: 400;
+  --fw-semi-bold: 600;
+}
+
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  color: #222222;
+  font-family: 'Inter', sans-serif;
+  font-weight: var(--fw-medium);
+}

@@ -1,4 +1,4 @@
-import '../styles/globals.css';
+import '../styles/styles.css';
 import propTypes from 'prop-types';
 
 function MyApp({ Component, pageProps }) {
@@ -8,6 +8,6 @@ function MyApp({ Component, pageProps }) {
 export default MyApp;
 
 MyApp.propTypes = {
-  Component: propTypes.Component,
-  pageProps: propTypes.element,
+  Component: propTypes.func,
+  pageProps: propTypes.object,
 };
