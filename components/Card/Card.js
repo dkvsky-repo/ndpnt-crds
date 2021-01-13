@@ -6,14 +6,22 @@ import { CardWrapper, CardMedia, CardDetails } from './Styles';
 import { PICSUM_ENDPOINT } from './constants';
 
 export default function Card() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [data, setData] = useState();
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+  const [data, setData] = useState([]);
 
   // With NextJS' getStaticProps we could make the app more performant.
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios(`${PICSUM_ENDPOINT}`);
-      setData(response.data);
+      setIsLoading(true);
+
+      try {
+        const response = await axios(`${PICSUM_ENDPOINT}`);
+        setData(response.data);
+      } catch (error) {
+        setIsError(true);
+      }
+
       setIsLoading(false);
     };
     fetchData();
@@ -21,6 +29,11 @@ export default function Card() {
 
   return (
     <>
+      {isError && (
+        <div>
+          <h1>Fetching Problem.</h1>Unable to load page. 🤮
+        </div>
+      )}
       {isLoading ? (
         <div>Loading...</div>
       ) : (
