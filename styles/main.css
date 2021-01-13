@@ -1,23 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 :root {
-  /* FONT SIZES */
+  /* Font size */
+  /* --------- */
   --fs-lg: 16px;
   --fs-md: 14px;
   --fs-sm: 12px;
-  /* FONT WEIGHT */
+  /* Font weight */
+  /* ----------- */
   --fw-normal: 400;
   --fw-semi-bold: 600;
 }
 
-.container {
+/* .container {
   min-height: 100vh;
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+} */
 
 body {
   color: #222222;

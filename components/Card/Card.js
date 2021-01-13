@@ -9,8 +9,13 @@ const CardWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   background-color: #ffffff;
-  width: 274px;
+  width: 325px;
   margin-bottom: 2rem;
+  transition: transform 0.5s;
+  transition-timing-function: ease-out;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 const CardMedia = styled.div``;
 
@@ -19,7 +24,7 @@ const CardDetails = styled.div`
   .card-heading {
     border-bottom: solid 1px #e0e0e0;
     padding-bottom: 8px;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     &__title {
       font-size: var(--fs-lg);
       font-weight: var(--fw-semi-bold);

@@ -1,9 +1,10 @@
+import CardPageLayout from '../components/Layout/CardPageLayout';
 import Card from '../components/Card/Card';
 
 export default function Home() {
   return (
-    <div className="container">
+    <CardPageLayout>
       <Card />
-    </div>
+    </CardPageLayout>
   );
 }
